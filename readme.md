@@ -17,6 +17,7 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -33,6 +34,7 @@
 
 * [Ionic v5](https://ionicframework.com/)
 * [Stencil v2](https://stenciljs.com/) a Web Component compiler for building fast, reusable UI components and static site generated Progressive Web Apps
+* [Stencil component lifecycle](https://stenciljs.com/docs/component-lifecycle) ComponentDidLoad used
 * [Ionic 5 open source Ionicons](https://ionicons.com/)
 
 ## :floppy_disk: Setup
@@ -74,9 +76,13 @@ For more info on how to use webpagetest check out [this article](https://zoompf.
 ## :clap: Inspiration
 
 * [Stencil documentation](https://stenciljs.com/docs/my-first-component)
-* [Gouv.fr API](https://geo.api.gouv.fr/) "Interrogez les référentiels géographiques plus facilement."
+* [Gouv.fr API](https://geo.api.gouv.fr/) & [API Documentation](https://api.gouv.fr/documentation/api-geo) "Interrogez les référentiels géographiques plus facilement."
 * [Geocoders: geocodejson-spec: Github repo](https://github.com/geocoders/geocodejson-spec) DRAFT: attempt to have standard geojson responses from geocoders.
+
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
