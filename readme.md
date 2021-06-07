@@ -1,8 +1,12 @@
 # :zap: Ionic Stencil Geo
 
 * Ionic 5 app using Stencil and the [French Gouvernment API](https://geo.api.gouv.fr/) to search for addresses in France
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/ionic-stencil-geo?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/ionic-stencil-geo?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/ionic-stencil-geo?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/ionic-stencil-geo?style=plastic)
 
 ## :page_facing_up: Table of contents
 
