@@ -1,6 +1,6 @@
 # :zap: Ionic Stencil Geo
 
-* Ionic 5 app using Stencil and the [French Gouvernment API](https://geo.api.gouv.fr/) to search for addresses in France
+* Ionic app using Stencil and the [French Gouvernment API](https://geo.api.gouv.fr/) to search for addresses in France
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/ionic-stencil-geo?style=plastic)
@@ -74,7 +74,7 @@ For more info on how to use webpagetest check out [this article](https://zoompf.
 
 ## :clipboard: Status & To-Do List
 
-* Status: In work
+* Status: In work. Accesses gouv data - show in a table - see Angular app.
 * To-Do: add interface, display info in table, add input box
 
 ## :clap: Inspiration
