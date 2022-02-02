@@ -1,7 +1,7 @@
 import { ICommune } from '../interfaces/gouv-data.interface';
 
 class GouvDataController {
-  public apiData: ICommune[];
+  apiData: ICommune[];
 
   async load(): Promise<ICommune[]> {
     if (this.apiData) {
@@ -10,11 +10,24 @@ class GouvDataController {
       return this.apiData;
     }
   }
-  async getData() {
-    const apiData = fetch(
-      'https://geo.api.gouv.fr/departements/05/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre',
-    ).then(response => response.json());
-    return apiData;
+  async getCommuneData() {
+    try {
+      let response = await fetch(
+        'https://geo.api.gouv.fr/departements/05/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre',
+      )
+      this.handleErrors(response);
+      const apiData = await response.json();
+      console.log('API data: ', apiData);
+      return apiData;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  handleErrors(response: Response) {
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
   }
 }
 

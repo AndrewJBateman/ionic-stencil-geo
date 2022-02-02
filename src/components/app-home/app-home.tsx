@@ -1,4 +1,4 @@
-import { Component, ComponentDidLoad, h, State } from '@stencil/core';
+import { Component, ComponentDidLoad, h, Prop } from '@stencil/core';
 import { GouvDataService } from '../../services/gouv-data.service';
 import { ICommune } from '../../interfaces/gouv-data.interface';
 
@@ -7,12 +7,11 @@ import { ICommune } from '../../interfaces/gouv-data.interface';
   styleUrl: 'app-home.css',
 })
 export class AppHome implements ComponentDidLoad {
-  @State() reportData: ICommune[] = [];
+  @Prop() reportData: ICommune[] = [];
 
   async componentDidLoad() {
     try {
-      const reportData = await GouvDataService.getData();
-      return reportData;
+      this.reportData = await GouvDataService.getCommuneData();
     } catch (err) {
       console.log(err);
     }
@@ -20,24 +19,35 @@ export class AppHome implements ComponentDidLoad {
 
   render() {
     return [
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Home</ion-title>
+      <ion-header translucent={true}>
+        <ion-toolbar color="secondary">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>List of French Communes</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content class="ion-padding">
-        <ion-grid>
+      <ion-content fullscreen={true} class="ion-padding">
+        <ion-grid fixed>
           <ion-row>
-            <ion-col>
-              <div>1 of 3</div>
-            </ion-col>
-            <ion-col>
-              <div>2 of 3</div>
-            </ion-col>
-            <ion-col>
-              <div>3 of 3</div>
-            </ion-col>
+            {this.reportData.map(data => (
+              <ion-col size="12" size-md="6">
+                <ion-card class="data-card">
+                  <ion-card-header color="primary">
+                    <h2>{data.nom}</h2>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-label>
+                      <p>Region: {data.codeRegion}</p>
+                      <p>Department: {data.codeDepartement}</p>
+                      <p>Population: {data.population}</p>
+                      <p>Postcodes: {data.codesPostaux[0]}</p>
+                    </ion-label>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            ))}
           </ion-row>
         </ion-grid>
       </ion-content>,
