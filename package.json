@@ -16,9 +16,9 @@
   },
   "devDependencies": {
     "@ionic/core": "^6.0.4",
-    "@stencil/core": "^2.6.0"
+    "@stencil/core": "^2.13.0"
   },
   "dependencies": {
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.5.2"
   }
 }
